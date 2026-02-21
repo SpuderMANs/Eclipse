@@ -1,4 +1,4 @@
-﻿namespace Eclipse.Example
+namespace Eclipse.Example
 {
     using Eclipse.API.Features;
     using Eclipse.API.Interfaces;
@@ -42,21 +42,34 @@
 
         private void OnPlayerJoined(JoinedEventArgs ev)
         {
-            Log.Info($"Player {ev.Player.DisplayedNickname} has joined the game!");
-            ev.Player.Show("Welcome to the game!", 5F);
+            Coroutine.CallDelayed(0.5f, () =>
+            {
+                Log.Info($"Player {ev.Player.DisplayedNickname} has joined the game!");
+                ev.Player.Show("Welcome to the game!", 5F);
+            });
         }
         private void OnPlayerLeft(LeftEventArgs ev)
         {
-            Log.Info($"Player {ev.Player.DisplayedNickname} has left the game!");
+            Coroutine.CallDelayed(0.5f, () =>
+            {
+                Log.Info($"Player {ev.Player.DisplayedNickname} has left the game!");
+            });
         }
         private void OnPlayerDied(DiedEventArgs ev)
         {
-            Log.Info($"Player {ev.Player.DisplayedNickname} has died!");
-            ev.Player.Inventory.TryAddItem("Health Potion", 1);
+            Coroutine.CallDelayed(0.5f, () =>
+            {
+                Log.Info($"Player {ev.Player.DisplayedNickname} has died!");
+                ev.Player.Show("You have died!", 5F);
+            });
         }
         private void OnPlayerDying(DyingEventArgs ev)
         {
-            Log.Info($"Player {ev.Player.DisplayedNickname} is dying!");
+            Coroutine.CallDelayed(0.5f, () =>
+            {
+                 Log.Info($"Player {ev.Player.DisplayedNickname} is dying!");
+                 ev.Player.Show("You are dying!", 5F);
+             });
         }
 
         private void OnRoundStarted(RoundStartedEventArgs ev)
