@@ -6,7 +6,7 @@ The advantage of using Eclipse is that it is simpler. Here is an example of a pl
 ```cs
 public class Main : IPlugin
 {
-    public string Name => "Eclipse.Events";
+    public string Name => "Good Plugin";
     public string Author { get; set; } = "SpuderMANs";
     public Version Version { get; set; } = new Version(1, 0, 0);
 
