@@ -1,7 +1,7 @@
 <a href="https://github.com/SpuderMANs/Eclipse/releases"><img src="https://img.shields.io/github/v/release/SpuderMANs/Eclipse?display_name=tag&style=for-the-badge&logo=gitbook&label=Release" href="https://github.com/SpuderMANs/Eclipse/releases" alt="GitHub Releases"></a>
 <img src="https://img.shields.io/github/downloads/SpuderMANs/Eclipse/total?style=for-the-badge&logo=github" alt="Downloads">
 <a href="https://discord.gg/eKu8sfEvMm">
-    <img src="https://img.shields.io/discord/1261714360854646905?style=for-the-badge&logo=discord" alt="Chat on Discord">
+    <img src="https://img.shields.io/discord/1475183031093559328?style=for-the-badge&logo=discord" alt="Chat on Discord">
 </a>
 
 --- 
