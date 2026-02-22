@@ -9,7 +9,7 @@
 Eclipse is a plugin framework for Burglin Gnomes Servers, All Eclipse events are coded with Harmony.
 
 ## How To Install
-Download `Assembly-CSharp.dll` and place it in the folder `C:\Program Files (x86)\Steam\steamapps\common\Burglin Gnomes Demo\Gnomium_Data\Managed`. Do the same with `Eclipse.dll` and `Eclipse.API.dll` and `0Harmony.dll`.
+Download `Assembly-CSharp.dll` and place it in the folder `C:\Program Files (x86)\Steam\steamapps\common\Burglin Gnomes Demo\Gnomium_Data\Managed`. Do the same with `Eclipse.dll` and `Eclipse.API.dll` , `0Harmony.dll` and `YamlDotNet.dll` .
 
 When you start the game, an “Eclipse” folder will be created in `C:\Users\YourUser\AppData\Roaming\Eclipse`. Open the folder and place `Eclipse.Events.dll` and any plugins you want that support the Eclipse Framework in the Plugins subfolder.
 
