@@ -1,4 +1,4 @@
-﻿namespace Eclipse.Loader
+namespace Eclipse.Loader
 {
     using HarmonyLib;
     using System;
@@ -18,6 +18,7 @@
     using YamlDotNet.Core.Tokens;
     using YamlDotNet.Serialization.NamingConventions;
     using YamlDotNet.Serialization;
+    using System.Runtime.InteropServices;
 
     public class Loader
     {
@@ -59,6 +60,15 @@
 
                 LoadDependencies();
                 LoadPlugins();
+
+                var typedPlugins = Plugins.Where(p => p.GetType().GetInterface("IPlugin`1") != null) .Select(p => (IPlugin)p).ToList();
+
+                var loadedConfigs = ConfigManager.Load(typedPlugins);
+
+                foreach (var plugin in typedPlugins)
+                {
+                    plugin.Config = loadedConfigs[plugin.Name];
+                }
                 OnEnabled();
                 var harmony = new Harmony("com.spudermans.eclipse");
                 harmony.PatchAll();
@@ -142,5 +152,6 @@
                 }
             }
         }
+
     }
 }
